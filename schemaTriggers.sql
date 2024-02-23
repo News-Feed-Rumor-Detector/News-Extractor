@@ -1,7 +1,7 @@
-DROP TRIGGER IF EXISTS update_author_article_count_trigger ON ArchiveVersions;
-DROP TRIGGER IF EXISTS update_author_article_count_trigger ON CurrentVersions;
+DROP TRIGGER IF EXISTS update_nfrd_db_trigger ON ArchiveVersions;
+DROP TRIGGER IF EXISTS update_nfrd_db_trigger ON CurrentVersions;
 
-CREATE OR REPLACE FUNCTION update_author_article_count() RETURNS TRIGGER AS $$
+CREATE OR REPLACE FUNCTION update_nfrd_db() RETURNS TRIGGER AS $$
 DECLARE
   author_name VARCHAR;
   source_id INT;
@@ -42,7 +42,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-CREATE TRIGGER update_author_article_count_trigger
+CREATE TRIGGER update_nfrd_db_trigger
 AFTER INSERT ON CurrentVersions
 FOR EACH ROW
-EXECUTE FUNCTION update_author_article_count();
+EXECUTE FUNCTION update_nfrd_db();
