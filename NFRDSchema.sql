@@ -1,0 +1,5 @@
+CREATE TABLE nfrd.Authors (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) UNIQUE NOT NULL,
+  article_count INT DEFAULT 0
+);
