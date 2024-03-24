@@ -1,0 +1,6 @@
+[Unit]
+Description=Invoke news-please shell script
+
+[Service]
+Type=oneshot
+ExecStart=./invoke_news_please.sh

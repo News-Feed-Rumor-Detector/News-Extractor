@@ -1,0 +1,10 @@
+[Unit]
+Description=Run invoke_news_please.service every 5 hours
+
+[Timer]
+OnUnitActiveSec=5h
+AccuracySec=1s
+Unit=invoke_news_please.service
+
+[Install]
+WantedBy=timers.target
