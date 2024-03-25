@@ -7,7 +7,8 @@ timeout 600 tail -f /dev/null
 
 # Once timeout is reached, kill all news-please processes
 # Find all process IDs related to news-please
-pids=$(pgrep -f "news-please")
+pids=$(pgrep -f "news-please" | grep -v "$(pgrep -fo invoke_news_please)")
+
 
 # Check if any process IDs were found
 if [ -n "$pids" ]; then
