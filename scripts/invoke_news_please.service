@@ -2,5 +2,9 @@
 Description=Invoke news-please shell script
 
 [Service]
-Type=oneshot
-ExecStart=./invoke_news_please.sh
+Type=simple
+TimeoutStartSec=15min
+WorkingDirectory=/home/nfrd/news-please-repo
+Environment="PATH=/home/nfrd/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+User=nfrd
+ExecStart=/home/nfrd/news-please-repo/invoke_news_please.sh
