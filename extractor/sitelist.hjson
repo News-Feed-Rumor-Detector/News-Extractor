@@ -23,8 +23,16 @@
     },
     {
       "url": "https://www.mirror.co.uk/"
+    },
+    {
+      "url": "https://www.nytimes.com/"
+    },
+    {
+      "url": "https://apnews.com/"
+    },
+    {
+      "url": "https://www.nbcnews.com/"
     }
+
   ]
 }
-
-
